@@ -1,0 +1,27 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "Npm Test Repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PriyankaVagadre/test.git"
+  },
+  "keywords": [
+    "Npm",
+    "publish",
+    "run",
+    "pack",
+    "build",
+    "etc"
+  ],
+  "author": "Priyanka Vagadre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PriyankaVagadre/test/issues"
+  },
+  "homepage": "https://github.com/PriyankaVagadre/test#readme"
+}
