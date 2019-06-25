@@ -1,0 +1,2 @@
+<textarea fxFill mdInput placeholder="qrr-value (URL or DATA URL)" [(ngModel)]="value"></textarea>
+<ng2-qrcode-reader (result)="render($event)" [qrr-show]="showQRCode" [qrr-value]="value" [qrr-type]="elementType"></ng2-qrcode-reader>
