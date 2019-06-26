@@ -51,15 +51,23 @@ export class CreateEmployeeComponent implements OnInit {
               proficiency : [''],
            })
     })
+
     this.employeeForm.get('fullname').valueChanges.subscribe(
       value =>{
         console.log(value);
       }
     )
+
     this.employeeForm.get('emailId').valueChanges.subscribe(
       value =>{
        console.log(value);
 
+      }
+    )
+
+    this.employeeForm.get('contactPreference').valueChanges.subscribe(
+      value =>{
+        this.onCheckedValue(value);
       }
     )
 
