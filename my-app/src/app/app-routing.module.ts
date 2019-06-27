@@ -6,6 +6,7 @@ import { CreateEmployeeComponent } from './create-employee/create-employee.compo
 
 // practise ---------------------------------------
 import { ReactiveFormTestComponent } from './practise/reactive-form-test/reactive-form-test.component';
+import { CustomPipeComponent } from './custom-pipe/custom-pipe.component';
 
 const routes: Routes = [
   {
@@ -27,4 +28,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const RoutingList = [HomeComponent, ListEmployeeComponent, CreateEmployeeComponent , ReactiveFormTestComponent];
+export const RoutingList = [HomeComponent, ListEmployeeComponent, CreateEmployeeComponent , ReactiveFormTestComponent , CustomPipeComponent];

@@ -6,7 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule, RoutingList } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { ReactiveFormsModule} from '@angular/forms'; // for reactive forms
+import { ReactiveFormsModule} from '@angular/forms';// for reactive forms
+import { HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ReactiveFormsModule} from '@angular/forms'; // for reactive forms
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

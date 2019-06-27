@@ -1,0 +1,32 @@
+[
+    {"id": 1, "name": "Priya", "lastname" : "Vagadre", "gender": "Female",
+     "addresses" :[
+       {"addressname": "permanent", "city" : "Bhopal", "state" : "MP" , "country" : "India"},
+       {"addressname": "temporary", "city" : "Pune", "state" : "MH" , "country" : "India"}
+     ]
+    },
+    {"id": 2, "name": "Shiven", "lastname" : "Shukla", "gender": "Male",
+      "addresses" :[
+        {"addressname": "permanent", "city" : "Faizabad", "state" : "UP" , "country" : "India"},
+        {"addressname": "temporary", "city" : "Pune", "state" : "MH" , "country" : "India"}
+      ]
+    },
+    {"id": 3, "name": "Pooja", "lastname" : "Tiwari", "gender": "Male",
+      "addresses" :[
+        {"addressname": "permanent", "city" : "Bhopal", "state" : "MP" , "country" : "India"},
+        {"addressname": "temporary", "city" : "Pune", "state" : "MH" , "country" : "India"}
+      ]
+    },
+    {"id": 4, "name": "Neha", "lastname" : "Sing", "gender": "Male",
+      "addresses" :[
+        {"addressname": "permanent", "city" : "Sarni", "state" : "MP" , "country" : "India"},
+        {"addressname": "temporary", "city" : "Bhopal", "state" : "MP" , "country" : "India"}
+      ]
+    },
+    {"id": 5, "name": "Raj", "lastname" : "Kumar", "gender": "Male",
+      "addresses" :[
+        {"addressname": "permanent", "city" : "Kanpur", "state" : "UP" , "country" : "India"},
+        {"addressname": "temporary", "city" : "Haidrabad", "state" : "Andra" , "country" : "India"}
+      ]
+    }
+]
