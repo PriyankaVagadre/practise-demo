@@ -10,13 +10,21 @@ import {Addresses} from "./address.model";
 })
 export class CustomPipeComponent implements OnInit {
   MyEmployeeList : Employee[] =[];
-   address : Addresses[] = [];
+  address : Addresses[] = [];
+  searchtext : string;
 
   constructor(public myservice : FetchDataService) { }
 
   ngOnInit() {
     this.myservice.getData().subscribe( response =>{
       this.MyEmployeeList = response;
+      this.MyEmployeeList.forEach (item =>{
+        this.address = item.addresses;
+        if ( this.address = item.addresses){
+          console.log("matched");
+        }
+        console.log(this.address );
+      })
     })
   }
 

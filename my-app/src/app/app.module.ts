@@ -9,11 +9,14 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule} from '@angular/forms';// for reactive forms
 import { HttpClientModule} from '@angular/common/http';
 
+import { EmployeeFilter } from './custom-pipe/filter.pipe'; // custom pipe
+
 
 @NgModule({
   declarations: [
     AppComponent,
     RoutingList,
+    EmployeeFilter,
   ],
   imports: [
     BrowserModule,

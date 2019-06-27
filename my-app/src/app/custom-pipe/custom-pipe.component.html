@@ -1,7 +1,7 @@
 
-<input type="text" placeholder="search">
+<input type="text" placeholder="search" [(ngModel)]="searchtext">
 
-<div class="list" *ngFor="let item of MyEmployeeList">
+<div class="list" *ngFor="let item of MyEmployeeList | filterPipe : searchtext ">
 <ul>
   <li>
     {{item.name}}
