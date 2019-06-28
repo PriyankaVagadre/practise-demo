@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import{ FormGroup , FormBuilder, Validators} from '@angular/forms'
 import { CustomerService } from '../shared/customer.service';
 @Component({
   selector: 'app-customer',
@@ -12,16 +11,10 @@ export class CustomerComponent implements OnInit {
   submitted : boolean;
 
 
-  constructor(public myfrombuilder : FormBuilder , public myserv : CustomerService) { }
+  constructor( public myserv : CustomerService) { }
 
   ngOnInit() {
-    this.newForm = this.myfrombuilder.group({
-      $key : [null],
-      fullName : ['' , Validators.required],
-      email : ['' , Validators.email],
-      mobile : ['' , [Validators.minLength(10) , Validators.required]],
-      location : [''],
-    })
+   this.newForm = this.myserv.newForm;
 
   }
 
