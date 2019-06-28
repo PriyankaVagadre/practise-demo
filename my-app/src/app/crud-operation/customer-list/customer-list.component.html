@@ -1,3 +1,26 @@
-<p>
-  customer-list works!
-</p>
+<form class="form-inline">
+  <input class="form-control" name="searchInput" placeholder="Search"style="width: 80%;">
+  <button class="btn btn-outline-primary">X</button>
+</form>
+<table class="table table-sm">
+  <thead>
+    <th>Full Name</th>
+    <th>Email</th>
+    <th>Mobile</th>
+    <th></th>
+  </thead>
+  <ng-container>
+    <tr class="table-dark">
+      <td>{{customer.fullName}}</td>
+      <td>{{customer.email}}</td>
+        <td>{{customer.mobile}}</td>
+        <td>
+          <button class="btn btn-outline-info" >Edit</button>
+          <button class="btn btn-outline-danger">Delete</button>
+        </td>
+    </tr>
+  </ng-container>
+</table>
+<div class="alert alert-danger">
+  Deleted successfully.
+</div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import{ FormGroup , FormBuilder} from '@angular/forms'
 @Component({
   selector: 'app-customer',
   templateUrl: './customer.component.html',
@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerComponent implements OnInit {
 
-  constructor() { }
+  public newForm = FormGroup;
+  constructor(public myfrombuilder : FormBuilder) { }
 
   ngOnInit() {
+    // this.newForm = new
   }
 
 }
