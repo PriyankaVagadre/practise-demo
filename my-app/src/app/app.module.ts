@@ -12,6 +12,11 @@ import { HttpClientModule} from '@angular/common/http';
 import { EmployeeFilter } from './custom-pipe/filter.pipe'; // custom pipe
 import { PrefixPipe } from './custom-pipe/prefix.pipe';
 
+import { AngularFireModule} from 'angularfire2';  //firebase modules
+import { AngularFireDatabaseModule} from 'angularfire2/database'  //firebase modules
+
+import {environment} from '../environments/environment'
+
 
 @NgModule({
   declarations: [
@@ -27,6 +32,11 @@ import { PrefixPipe } from './custom-pipe/prefix.pipe';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
+
+    AngularFireModule.initializeApp(environment.firebaseConfig),  //firebase modules
+    AngularFireDatabaseModule  //firebase modules
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
