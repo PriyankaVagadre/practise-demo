@@ -8,6 +8,9 @@ import { CreateEmployeeComponent } from './create-employee/create-employee.compo
 import { ReactiveFormTestComponent } from './practise/reactive-form-test/reactive-form-test.component';
 import { CustomPipeComponent } from './custom-pipe/custom-pipe.component';
 
+import { CustomerComponent } from './crud-operation/customer/customer.component';
+import { CustomerListComponent } from './crud-operation/customer-list/customer-list.component';
+
 const routes: Routes = [
   {
     path : 'home',
@@ -28,4 +31,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const RoutingList = [HomeComponent, ListEmployeeComponent, CreateEmployeeComponent , ReactiveFormTestComponent , CustomPipeComponent];
+export const RoutingList = [HomeComponent, ListEmployeeComponent, CreateEmployeeComponent , ReactiveFormTestComponent ,
+                            CustomPipeComponent ,
+                            CustomerComponent,
+                            CustomerListComponent,];

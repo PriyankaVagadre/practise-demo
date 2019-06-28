@@ -10,6 +10,7 @@ import { ReactiveFormsModule} from '@angular/forms';// for reactive forms
 import { HttpClientModule} from '@angular/common/http';
 
 import { EmployeeFilter } from './custom-pipe/filter.pipe'; // custom pipe
+import { PrefixPipe } from './custom-pipe/prefix.pipe';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { EmployeeFilter } from './custom-pipe/filter.pipe'; // custom pipe
     AppComponent,
     RoutingList,
     EmployeeFilter,
+    PrefixPipe,
   ],
   imports: [
     BrowserModule,

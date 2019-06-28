@@ -1,10 +1,10 @@
 
 <input type="text" placeholder="search" [(ngModel)]="searchtext">
 
-<div class="list" *ngFor="let item of MyEmployeeList | filterPipe : searchtext ">
+<div class="list" *ngFor="let item of MyEmployeeList | filterPipe : searchtext">
 <ul>
   <li>
-    {{item.name}}
+    {{item.name }}
     {{item.lastname}}
     {{item.gender}}
     <ol *ngFor="let add of item.addresses" type="a">
