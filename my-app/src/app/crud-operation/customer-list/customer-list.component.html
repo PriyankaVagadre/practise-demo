@@ -7,20 +7,21 @@
     <th>Full Name</th>
     <th>Email</th>
     <th>Mobile</th>
-    <th></th>
+    <th>Location</th>
   </thead>
   <ng-container>
-    <tr class="table-dark">
-      <!-- <td>{{customer.fullName}}</td>s
-      <td>{{customer.email}}</td>
-        <td>{{customer.mobile}}</td> -->
+    <tr class="table-dark" *ngFor="let item of customerArray">
+      <td>{{item.fullName}}</td>
+      <td>{{item.email}}</td>
+        <td>{{item.mobile}}</td>
+        <td>{{item.location}}</td>
         <td>
-          <button class="btn btn-outline-info" >Edit</button>
-          <button class="btn btn-outline-danger">Delete</button>
+          <button class="btn btn-outline-info" (click)="customerService.populatedForm(item)">Edit</button>
+          <button class="btn btn-outline-danger" (click)="onDelete(item.$key)">Delete</button>
         </td>
     </tr>
   </ng-container>
 </table>
-<div class="alert alert-danger">
+<div class="alert alert-danger" *ngIf="deleteMessage">
   Deleted successfully.
 </div>

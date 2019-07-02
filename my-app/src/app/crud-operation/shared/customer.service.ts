@@ -20,8 +20,33 @@ export class CustomerService {
     })
 
     getCustomers(){
-      this.customerList = this.firebase.list('customers');
+      this.customerList = this.firebase.list('test');
       return this.customerList.snapshotChanges();
+    }
+
+    insertCustomer(customer){
+      this.customerList.push({
+         fullName: customer.fullName,
+         email : customer.email,
+         mobile : customer.mobile,
+         location : customer.location
+      })
+    }
+    populatedForm(customer){
+      this.newForm.setValue(customer);
+    }
+
+    updateCustomer(customer){
+      this.customerList.update( customer.$key ,{
+        fullName: customer.fullName,
+         email : customer.email,
+         mobile : customer.mobile,
+         location : customer.location
+      })
+    }
+
+    deleteCustomer($key : string){
+     this.customerList.remove($key)
     }
 
 

@@ -8,31 +8,37 @@ import { CustomerService } from '../shared/customer.service';
 export class CustomerComponent implements OnInit {
 
   public newForm;
-  submitted : boolean;
+  submitted: boolean;
+  showSuccessMessage: boolean;
 
 
-  constructor( public myserv : CustomerService) { }
+  constructor(public myserv: CustomerService) { }
 
   ngOnInit() {
-   this.newForm = this.myserv.newForm;
+    this.newForm = this.myserv.newForm;
 
   }
 
-  onSubmit(){
+  onSubmit() {
     this.submitted = true;
+    if (this.myserv.newForm.valid){
+      if (this.newForm.get('$key').value == null) {
+        console.log(this.newForm.value); //insert
+        this.myserv.insertCustomer(this.myserv.newForm.value);
+        this.showSuccessMessage = true;
+        setTimeout(() => this.showSuccessMessage = false , 3000)
+        this.submitted = false;
+        console.log(this.myserv.newForm.value);
 
-
-
-      if(this.newForm.get('$key').value == null){
-        //insert
-        console.log(this.newForm.value);
       }
       else {
-        //update
-        console.log("sdfl");
+        this.myserv.updateCustomer(this.myserv.newForm.value);
+        this.showSuccessMessage = true;
+        setTimeout(() => this.showSuccessMessage = false , 3000)
+        this.submitted = false;
+        console.log("sdfl");//update
       }
-
-
+    }
   }
 
 }
