@@ -15,7 +15,11 @@ import { PrefixPipe } from './custom-pipe/prefix.pipe';
 import { AngularFireModule} from 'angularfire2';  //firebase modules
 import { AngularFireDatabaseModule} from 'angularfire2/database'  //firebase modules
 
-import {environment} from '../environments/environment'
+import {environment} from '../environments/environment';
+import { MyTableComponent } from './my-table/my-table.component';
+import { MatTableModule, MatPaginatorModule, MatSortModule, MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { MyDashboardComponent } from './my-dashboard/my-dashboard.component';
+import { LayoutModule } from '@angular/cdk/layout'
 
 
 @NgModule({
@@ -24,6 +28,8 @@ import {environment} from '../environments/environment'
     RoutingList,
     EmployeeFilter,
     PrefixPipe,
+    MyTableComponent,
+    MyDashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +40,7 @@ import {environment} from '../environments/environment'
     HttpClientModule,
 
     AngularFireModule.initializeApp(environment.firebaseConfig),  //firebase modules
-    AngularFireDatabaseModule  //firebase modules
+    AngularFireDatabaseModule, MatTableModule, MatPaginatorModule, MatSortModule, MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule, LayoutModule  //firebase modules
 
 
   ],

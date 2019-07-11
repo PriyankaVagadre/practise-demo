@@ -9,6 +9,7 @@ import { CustomerService } from '../shared/customer.service';
 export class CustomerListComponent implements OnInit {
   customerArray = [];
   deleteMessage : boolean;
+  searchFilter;
 
   constructor(public customerService : CustomerService) { }
 
@@ -32,6 +33,10 @@ export class CustomerListComponent implements OnInit {
     else{
 
     }
+  }
+
+  filterSearch(customer){
+     return customer.fullName.toLowerCase().indexOf(this.searchFilter.toLowerCase()) != -1;
   }
 
 }

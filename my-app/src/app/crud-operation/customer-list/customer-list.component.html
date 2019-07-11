@@ -1,6 +1,7 @@
 <form class="form-inline">
-  <input class="form-control" name="searchInput" placeholder="Search"style="width: 80%;">
-  <button class="btn btn-outline-primary">X</button>
+  <input class="form-control" name="searchInput" placeholder="Search"style="width: 80%;" #searchText ="ngModel"
+   [(ngModel)]="searchFilter"/>
+  <button class="btn btn-outline-primary" (click)="searchFilter =''">X</button>
 </form>
 <table class="table table-sm">
   <thead>
@@ -9,8 +10,8 @@
     <th>Mobile</th>
     <th>Location</th>
   </thead>
-  <ng-container>
-    <tr class="table-dark" *ngFor="let item of customerArray">
+  <ng-container *ngFor="let item of customerArray">
+    <tr class="table-dark">
       <td>{{item.fullName}}</td>
       <td>{{item.email}}</td>
         <td>{{item.mobile}}</td>
